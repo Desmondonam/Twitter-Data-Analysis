@@ -1,0 +1,28 @@
+Interim Report of Twitter Data Analysis
+
+Abstract 
+Information that is supplied by the public is important in making the general feel of teh public to emerging issues in thre society. With the help of sentiment analysis, this expeiment will provide the general comments that are made in regard to covid19 in Africa and the countris of Afria. In this study our main focus is to identify and train a model that will be used in sentiment anlaysis and process the data that we have from twitter. We will as well include pipeline that will enable the model to identify the drift in data. Our training set of data will include the coutry mentions in the data and thus our need for the data drift. The main area of study in this analysis is the inclusion of how we can use natural language processing.
+We will then measure the accuracy of the score of the sentiments that are made so that we are able to draw insights from the model that we have. The main aim of this experiment thus is to ensure that there is efficiency in the prediction of the sentiments that are made and there is a model that can do the sentiment analysis. 
+
+Introduction 
+Social media has a way in which the sentiments from the public can be useful in the society. It is the purpose of this data analysis, by the sentiment analysis that we are carrying out to identufy, by the use of the models that are going to be applied to make sense in the twitter data analysis. We are going to use the differrent methords that are used in the development of models in the carryong out of the model creation. Twitter data i allows oen to trach the brand and also to identify the customers that are able to cintribute to the development of a brand or a product. The focus of this analysis is not only to get the sentiment analysis of covid19 in Africa but as well to get the sentiment analysis of the different countries that are in Africa. 
+
+In the process of this analysis it is very important to set up the MLOps pipeline so as to identify the different steps up to the deployment stage of the data analysis.
+
+
+Data
+The data that we are going to use in this analysis is a data that is availed via a json file, but collected in a tweeter. The data was collected by the use of the APIs and thus, the process of the scrapping of the data and the preprocessing stage of the data was very useful as to ensure that the data we collected was the required data that was needed for the creation of the model. The data was as well provided in two forms, the first data was one that included the Africa alone, while the second data is the data that involves the individual countries. 
+
+How it is collected - it is from twitter 
+Key information about the data: format of data, number of rows, keywords used to collect the data, etc.
+
+* Method - the MLOps components you plan to implement
+A flow chart demonstrating the different components in your MLOps design and their interaction
+How you implemented the different components 
+Implementation details e.g. Travis CI, unit testing coverage, Streamlit for dashboard, etc. 
+* Result and Discussion 
+Which parts you have implemented so far
+Figures and insights you extracted so far
+What you plan to do the rest of the week
+The challenge you faced
+
