@@ -120,7 +120,10 @@ class TweetDfExtractor:
         
         return location
 
-    
+    def find_lang(self)->list:
+        lang = [x.get('retweeted_status', {}).get('lang', None) for x in self.tweets_list]
+        return lang  
+
         
         
     def get_tweet_df(self, save=False)->pd.DataFrame:
