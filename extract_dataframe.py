@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 from textblob import TextBlob
+from clean_tweets_dataframe import *
 
 def read_json(json_file: str)->list:
     """
@@ -166,6 +167,11 @@ if __name__ == "__main__":
 
     # use all defined functions to generate a dataframe with the specified columns above
 
-    
+    clean = Clean_Tweets(tweet_df)
+    clean_df =clean.drop_unwanted_column(tweet_df)
+    clean_df =clean.drop_duplicate(clean_df)
+    clean_df =clean.convert_to_datetime(clean_df)
+    print(clean_df.head(5))
+    clean_df.to_csv('./data/clean_tweet.csv')
 
-    # this comment is only for the prpose of testing travis
+    # this comment is only for the purpose of testing travis
