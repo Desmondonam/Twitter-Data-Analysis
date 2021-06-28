@@ -174,4 +174,4 @@ if __name__ == "__main__":
     print(clean_df.head(5))
     clean_df.to_csv('./data/clean_tweet.csv')
 
-    # this comment is only for the purpose of testing travis
+    # this comment is only for the purpose of testing travis test
