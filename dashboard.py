@@ -1,15 +1,17 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 import altair as alt
 from wordcloud import WordCloud
+import plotly.express as px
 from my_data import db_execute_fetch
 
-st.set_page_config(page_title="Dashboard | Tweeter Data Analysis ", layout="wide")
+
+
+st.set_page_config(page_title="Dashboard", layout="wide")
 
 def loadData():
-    query = "select * from Tweeter"
+    query = "select * from TweetInformation"
     df = db_execute_fetch(query, dbName="tweets", rdf=True)
     return df
 
@@ -22,7 +24,7 @@ def selectHashTag():
 
 def selectLocAndAuth():
     df = loadData()
-    location = st.multiselect("choose Location of tweets", list(df['place'].unique()))
+    location = st.multiselect("choose Location of tweets", list(df['place_coordinate'].unique()))
     lang = st.multiselect("choose Language of tweets", list(df['language'].unique()))
 
     if location and not lang:
@@ -85,10 +87,11 @@ def langPie():
     with colB2:
         st.write(dfLangCount)
 
-st.markdown("<h1 style='color:#0b4eab;font-size:36px;border-radius:10px;'>Dashboard | Data Visualization for Twitter Data Analysis Project</h1>", unsafe_allow_html=True)
+
+st.title("Data Display")
 selectHashTag()
-# st.markdown("<p style='padding:10px; background-color:#000000;color:#00ECB9;font-size:16px;border-radius:10px;'>Section Break</p>", unsafe_allow_html=True)
-selectLocAndAuth()
+st.markdown("<p style='padding:10px; background-color:#000000;color:#00ECB9;font-size:16px;border-radius:10px;'>Section Break</p>", unsafe_allow_html=True)
+# selectLocAndAuth()
 st.title("Data Visualizations")
 wordCloud()
 with st.beta_expander("Show More Graphs"):

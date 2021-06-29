@@ -1,19 +1,17 @@
-CREATE TABLE Tweeter
-(
-    id SERIAL PRIMARY KEY,
-    created_at TEXT NOT NULL,
-    source VARCHAR(200) NOT NULL,
-    clean_text TEXT DEFAULT NULL,
-    polarity FLOAT DEFAULT NULL,
-    subjectivity FLOAT DEFAULT NULL,
-    language TEXT DEFAULT NULL,
-    favorite_count INT DEFAULT NULL,
-    retweet_count INT DEFAULT NULL,
-    original_author TEXT DEFAULT NULL,
-    followers_count INT DEFAULT NULL,
-    friends_count INT DEFAULT NULL,
-    hashtags TEXT DEFAULT NULL,
-    sensitivity TEXT DEFAULT NULL,
-    user_mentions TEXT DEFAULT NULL,
-    place TEXT DEFAULT NULL
-)
+USE schemas
+
+-- This is to create a table on the database
+CREATE TABLE `schemas`.`rawdata` (
+  `idrawdata` INT NOT NULL,
+  PRIMARY KEY (`idrawdata`));
+
+-- This is to drop a table from the database 
+DROP TABLE `schemas`.`tobedeletedtable`;
+
+
+-- THis is to Insert a value in a database
+INSERT INTO `schemas`.`rawdata` (`idrawdata`) VALUES ('11');
+
+
+-- This is to Update a value in a database
+UPDATE `schemas`.`rawdata` SET `idrawdata` = '5' WHERE (`idrawdata` = '10');
