@@ -1,17 +1,17 @@
-USE schemas
+USE schema
 
--- This is to create a table on the database
-CREATE TABLE `schemas`.`rawdata` (
+-- Create table on the database
+CREATE TABLE `schema`.`rawdata` (
   `idrawdata` INT NOT NULL,
   PRIMARY KEY (`idrawdata`));
 
--- This is to drop a table from the database 
-DROP TABLE `schemas`.`tobedeletedtable`;
+-- Drop table
+DROP TABLE `schema`.`tobedeletedtable`;
 
 
--- THis is to Insert a value in a database
-INSERT INTO `schemas`.`rawdata` (`idrawdata`) VALUES ('11');
+-- Insert a value in a database
+INSERT INTO `schema`.`rawdata` (`idrawdata`) VALUES ('11');
 
 
--- This is to Update a value in a database
-UPDATE `schemas`.`rawdata` SET `idrawdata` = '5' WHERE (`idrawdata` = '10');
+-- Update a value in a database
+UPDATE `schema`.`rawdata` SET `idrawdata` = '5' WHERE (`idrawdata` = '10');

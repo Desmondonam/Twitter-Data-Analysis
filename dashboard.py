@@ -8,7 +8,7 @@ from my_data import db_execute_fetch
 
 
 
-st.set_page_config(page_title="Dashboard", layout="wide")
+st.set_page_config(page_title="Dashboard Day 5", layout="wide")
 
 def loadData():
     query = "select * from TweetInformation"
@@ -56,7 +56,7 @@ def wordCloud():
         cleanText += " ".join(tokens) + " "
 
     wc = WordCloud(width=650, height=450, background_color='white', min_font_size=5).generate(cleanText)
-    st.title("Tweet Text Word Cloud")
+    st.title("Twitter Words")
     st.image(wc.to_array())
 
 def stBarChart():
@@ -88,7 +88,7 @@ def langPie():
         st.write(dfLangCount)
 
 
-st.title("Data Display")
+st.title("Data Visualisation")
 selectHashTag()
 st.markdown("<p style='padding:10px; background-color:#000000;color:#00ECB9;font-size:16px;border-radius:10px;'>Section Break</p>", unsafe_allow_html=True)
 # selectLocAndAuth()
