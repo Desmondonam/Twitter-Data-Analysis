@@ -17,7 +17,7 @@ def loadData():
 
 def selectHashTag():
     df = loadData()
-    hashTags = st.multiselect("choose combaniation of hashtags", list(df['hashtags'].unique()))
+    hashTags = st.multiselect("Choose a combination of Words", list(df['hashtags'].unique()))
     if hashTags:
         df = df[np.isin(df, hashTags).any(axis=1)]
         st.write(df)
@@ -47,17 +47,6 @@ def barChart(data, title, X, Y):
                 order='ascending')), y=f"{Y}:Q"))
     st.altair_chart(msgChart, use_container_width=True)
 
-def wordCloud():
-    df = loadData()
-    cleanText = ''
-    for text in df['clean_text']:
-        tokens = str(text).lower().split()
-
-        cleanText += " ".join(tokens) + " "
-
-    wc = WordCloud(width=650, height=450, background_color='white', min_font_size=5).generate(cleanText)
-    st.title("Twitter Words")
-    st.image(wc.to_array())
 
 def stBarChart():
     df = loadData()
@@ -86,6 +75,19 @@ def langPie():
         st.plotly_chart(fig)
     with colB2:
         st.write(dfLangCount)
+
+
+def wordCloud():
+    df = loadData()
+    cleanText = ' '
+    for text in df['clean_text']:
+        tokens = str(text).lower().split()
+
+        cleanText += " ".join(tokens) + " "
+
+    wc = WordCloud(width=650, height=450, background_color='white', min_font_size=5).generate_from_frequencies(cleanText)
+    st.title("Twitter Words")
+    st.image(wc.to_array())
 
 
 st.title("Data Visualisation")
