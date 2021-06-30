@@ -13,7 +13,8 @@ st.set_page_config(page_title="Dashboard Day 5", layout="wide")
 def loadData():
     query = "select * from TweetInformation"
     df = db_execute_fetch(query, dbName="tweets", rdf=True)
-    return df
+    print(df)
+    
 
 def selectHashTag():
     df = loadData()
@@ -87,7 +88,7 @@ def wordCloud():
         cleanText += " ".join(tokens) + " "
     
     print(cleanText)
-    wc = WordCloud(width=600, height=400, background_color='white', min_font_size=5).generate_from_text(cleanText)
+    wc = WordCloud(width=650, height=450, background_color='white', min_font_size=5, stopwords='Africa').generate_from_frequencies(cleanText)
     st.title("Twitter Words")
     st.image(wc.to_array())
 
