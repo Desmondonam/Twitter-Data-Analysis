@@ -78,14 +78,16 @@ def langPie():
 
 
 def wordCloud():
+    # st.title("Twitter Words")
     df = loadData()
     cleanText = ' '
     for text in df['clean_text']:
         tokens = str(text).lower().split()
-
+        print(tokens)
         cleanText += " ".join(tokens) + " "
-
-    wc = WordCloud(width=650, height=450, background_color='white', min_font_size=5).generate_from_frequencies(cleanText)
+    
+    print(cleanText)
+    wc = WordCloud(width=600, height=400, background_color='white', min_font_size=5).generate_from_text(cleanText)
     st.title("Twitter Words")
     st.image(wc.to_array())
 

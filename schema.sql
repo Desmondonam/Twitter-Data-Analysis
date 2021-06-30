@@ -1,3 +1,5 @@
+
+
 CREATE TABLE IF NOT EXISTS `TweetInformation` 
 (
     `id` INT NOT NULL AUTO_INCREMENT,
@@ -19,3 +21,4 @@ CREATE TABLE IF NOT EXISTS `TweetInformation`
     `place_coordinate` VARCHAR(100) DEFAULT NULL,
     PRIMARY KEY (`id`)
 )
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
