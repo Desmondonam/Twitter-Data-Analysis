@@ -2,8 +2,6 @@ import pandas as pd
 import re
 # import enchant
 
-
-
 class TweetCleanser:
     """
     -this class cleans the tweets and
@@ -65,14 +63,14 @@ class TweetCleanser:
         return re.findall('(#[A-Za-z]+[A-Za-z0-9-_]+)', tweet)
 
     def save_changes(self)->pd.DataFrame:
-        self.df.to_csv("data/cleaned_data.csv",index=False)
+        self.df.to_csv("/media/desmond/C0488D6D488D62D0/10 Academy/Week1/Twitter-Data-Analysis/data/cleaned_data.csv",index=False)
 
     # def clean_text(self,tweet):
     #     """this function cleans the original text"""
     #     return ' '.join(w for w in tweet.split() if self.en_us.check(w))
 
 if __name__ == "__main__":
-    df = pd.read_csv("data/processed_tweet_data.csv")
+    df = pd.read_csv("/media/desmond/C0488D6D488D62D0/10 Academy/Week1/Twitter-Data-Analysis/data/processed_tweet_data.csv")
     cleanser = TweetCleanser(df)
     cleanser.drop_unwanted_column(df)
     cleanser.drop_duplicate(df)
