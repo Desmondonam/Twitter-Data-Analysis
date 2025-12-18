@@ -57,3 +57,4 @@ pymysql>=1.1
 pytest>=7.4
 black>=23.9
 flake8>=6.1
+textblob>=0.17

@@ -144,10 +144,9 @@ class ExtractTweets:
         data_ = dict(zip(columns, values))
         data = {key: pd.Series(value) for key, value in data_.items()}
         df = pd.DataFrame(data=data)
-# /media/desmond/C0488D6D488D62D0/10 Academy/twitter_data_analysis/Twitter-Data-Analysis/data
         if save:
             df.to_csv(
-                '/media/desmond/C0488D6D488D62D0/10 Academy/twitter_data_analysis/Twitter-Data-Analysis/data/processed_tweet_data.csv', index=False)
+                r'C:\Users\Admin\Desktop\projects\Data Analysis Projects\Twitter-Data-Analysis\data\processed_data2.csv', index=False)
             print('File Successfully Saved.!!!')
 
         return df
@@ -156,5 +155,5 @@ class ExtractTweets:
 if __name__ == "__main__":
 
     extracted_tweets = ExtractTweets(
-        "/media/desmond/C0488D6D488D62D0/10 Academy/twitter_data_analysis/Twitter-Data-Analysis/data/Economic_Twitter_Data_minified.json")
+        r"C:\Users\Admin\Desktop\projects\Data Analysis Projects\Twitter-Data-Analysis\data\Economic_Twitter_Data_minified.json")
     df = extracted_tweets.get_tweet_df(save=True)
