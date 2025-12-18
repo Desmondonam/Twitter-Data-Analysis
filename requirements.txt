@@ -1,3 +1,59 @@
-pandas>=1.1.0
-pip==19.2.3
-textblob==0.15.3
+# ===============================
+# Core Scientific Computing
+# ===============================
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# ===============================
+# Data Visualization
+# ===============================
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+
+# ===============================
+# Machine Learning
+# ===============================
+scikit-learn>=1.3
+xgboost>=1.7
+lightgbm>=4.0
+
+# ===============================
+# Statistics
+# ===============================
+statsmodels>=0.14
+
+# ===============================
+# Jupyter & Interactive Tools
+# ===============================
+jupyterlab>=4.0
+notebook>=7.0
+ipykernel>=6.25
+
+# ===============================
+# Data Processing & Utilities
+# ===============================
+pyyaml>=6.0
+tqdm>=4.66
+joblib>=1.3
+
+# ===============================
+# Model Persistence
+# ===============================
+pickle-mixin>=1.0.2
+
+
+# ===============================
+# Database Connectivity (Optional)
+# ===============================
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+pymysql>=1.1
+
+# ===============================
+# Testing & Code Quality (Optional)
+# ===============================
+pytest>=7.4
+black>=23.9
+flake8>=6.1
