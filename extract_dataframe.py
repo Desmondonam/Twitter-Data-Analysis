@@ -148,6 +148,7 @@ class ExtractTweets:
         df = pd.DataFrame(data=data)
         
         if save:
+            path2 = r"C:\Users\Admin\Desktop\Omdena\Bhutan\MLOPS\02_Python_for Machine Learning and Data Science\Twitter-Data-Analysis\data"
             df.to_csv('C:/Users/Admin/Desktop/Desmondonam/Data_Science/Week0/Twitter-Data-Analysis/data/processed_tweet_data.csv', index=False)
             print('File Successfully Saved.!!!')
             
@@ -156,5 +157,6 @@ class ExtractTweets:
 
 if __name__ == "__main__":
 
-    extracted_tweets = ExtractTweets(r"C:\Users\Admin\Desktop\Desmondonam\Data_Science\Week0\Twitter-Data-Analysis\data\Economic_Twitter_Data_minified.json")
+    path = r"C:\Users\Admin\Desktop\Omdena\Bhutan\MLOPS\02_Python_for Machine Learning and Data Science\Twitter-Data-Analysis\data\Economic_Twitter_Data_minified.json"
+    extracted_tweets = ExtractTweets(path)
     df = extracted_tweets.get_tweet_df(save=True)
